@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/ru/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ANT Технологии", 
+		"/ru/technologies/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Проекты", 
+		"/ru/projects/",
+		Array(), 
+		Array(),
+		"" 
+	),
+	Array(
+		"Партнерам", 
+		"/ru/partners/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Видео", 
+		"/ru/videos/",
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

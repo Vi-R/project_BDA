@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Main",
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ANT Technologies",
+		"/technologies/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Projects",
+		"/projects/", 
+		Array(), 
+		Array(),
+		"" 
+	),
+	Array(
+		"Partners",
+		"/partners/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Videos",
+		"/videos/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

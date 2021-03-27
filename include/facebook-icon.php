@@ -1,0 +1,1 @@
+<a href="https://www.facebook.com/antrussia" target="_blank"><img class="img-fluid" src="<?= SITE_TEMPLATE_PATH ?>/img/template/icons/fb.png"></a>

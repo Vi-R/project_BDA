@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Ready to start package</title>
+
+        <!-- Main CSS -->
+        <link rel="icon" href="favicon.ico" />
+
+        <!-- Included CSS libraries and Main Site styles -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Custom User Styles -->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- JS min Viewport helper -->
+        <script src="vendors/viewport.js"></script>
+    </head>
+<body class="inner-page">
+
+
+    <div class="page-wrapper">
+
+        <div class="side-line">
+            <div class="side-line-menu">
+                <!-- Menu -->
+                <div class="side-line-menu__item dropdown">
+                    <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Menu" data-trigger="hover" data-placement="left" data-offset="0, 10" data-toggle="dropdown">
+                        <span class="side-line-menu__icon side-line-menu__icon_menu"></span>
+                    </a>
+                    <div class="dropdown-menu side-line-menu__dropdown">
+                        <div class="side-drop">
+                            <div class="side-drop__wrapper">
+                                <div class="side-drop__title">Menu</div>
+                                <ul class="side-drop-menu">
+                                    <li class="side-drop-menu__item">
+                                        <a href="?" class="side-drop-menu__link">ANT technologies</a>
+                                    </li>
+                                    <li class="side-drop-menu__item">
+                                        <a href="?" class="side-drop-menu__link">Projects</a>
+                                    </li>
+                                    <li class="side-drop-menu__item">
+                                        <a href="?" class="side-drop-menu__link">Partners</a>
+                                    </li>
+                                    <li class="side-drop-menu__item">
+                                        <a href="?" class="side-drop-menu__link">Videos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Menu -->
+
+                <!-- Cookies -->
+                <div class="side-line-menu__item dropdown">
+                    <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Cookie" data-trigger="hover" data-placement="left" data-offset="0, 10" data-toggle="dropdown" id="side_cookies_dropdown_link">
+                        <span class="side-line-menu__icon side-line-menu__icon_cookie"></span>
+                    </a>
+                    <div class="dropdown-menu side-line-menu__dropdown">
+                        <div class="side-drop">
+                            <div class="side-drop__wrapper">
+                                <div class="side-drop__title">Cookies</div>
+                                <div class="side-drop__container">
+                                    <div class="side-drop__text">
+                                        <div>Updated Cookies Notice - you'll see this message only once.</div>
+                                        <div>We use cookies and similar technology on this website, which helps us to know a little bit about you and how you use our website. This improves the browsing experience for you and enables us to tailor better products and services to you and others. Cookies are stored locally on your computer or mobile device.</div>
+                                        <div>To accept cookies continue browsing as normal or go to the Cookies Notice for more information and to set your preferences.</div>
+                                    </div>
+
+                                    <div class="side-drop__footer">
+                                        <button class="btn btn-block btn-outline-dark side-drop__btn" onclick="$('#side_cookies_dropdown_link').dropdown('toggle')">Accept and close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Cookies -->
+
+                <!-- Email -->
+                <div class="side-line-menu__item dropdown">
+                    <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Send a <br>message" data-html="true" data-offset="0, 10" data-trigger="hover" data-placement="left" data-toggle="dropdown">
+                        <span class="side-line-menu__icon side-line-menu__icon_email"></span>
+                    </a>
+                    <div class="dropdown-menu side-line-menu__dropdown">
+                        <div class="side-drop">
+                            <div class="side-drop__wrapper">
+                                <div class="side-drop__title">Send a message</div>
+                                <div class="side-drop__container">
+                                    <form action="?">
+                                        <div class="side-drop-form">
+                                            <div class="form-group">
+                                                <div class="mb-2">
+                                                    <label class="side-drop-form__label">Name</label>
+                                                    <input type="text" class="form-control side-drop-form__input" name="name" placeholder="Enter name" required>
+                                                </div>
+                                                <div>
+                                                    <label class="side-drop-form__label">Email</label>
+                                                    <input type="text" class="form-control side-drop-form__input" name="email" placeholder="Enter email" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="side-drop-form__label">Message</label>
+                                                <textarea rows="5" class="form-control side-drop-form__input" name="message" placeholder="Enter your message"></textarea>
+                                            </div>
+
+                                            <div class="side-drop__footer side-drop__footer_form">
+                                                <button type="submit" class="btn btn-outline-dark btn-block side-drop__btn">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Email -->
+
+                <!-- Contacts -->
+                <div class="side-line-menu__item dropdown">
+                    <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Contacts" data-trigger="hover" data-placement="left" data-offset="0, 10" data-toggle="dropdown">
+                        <span class="side-line-menu__icon side-line-menu__icon_map"></span>
+                    </a>
+                    <div class="dropdown-menu side-line-menu__dropdown">
+                        <div class="side-drop">
+                            <div class="side-drop__wrapper">
+                                <div class="side-drop__title">Contacts</div>
+                                <div class="side-drop__container">
+                                    <ul class="side-drop-contacts list-unstyled">
+                                        <li class="side-drop-contacts__item">
+                                            <div class="side-drop-contacts__title">Phone</div>
+                                            <div class="side-drop-contacts__value">
+                                                <a href="tel:+79616759281">+7 (961) 675-92-81</a>
+                                            </div>
+                                        </li>
+                                        <li class="side-drop-contacts__item">
+                                            <div class="side-drop-contacts__title">E-mail</div>
+                                            <div class="side-drop-contacts__value">
+                                                <a href="mailto:ant-russia@mail.ru">ant-russia@mail.ru</a>
+                                            </div>
+                                        </li>
+                                        <li class="side-drop-contacts__item">
+                                            <div class="side-drop-contacts__title">Facebook</div>
+                                            <div class="side-drop-contacts__value">
+                                                <a href="https://www.facebook.com/antrussia" target="_blank">https://www.facebook.com/antrussia</a>
+                                            </div>
+                                        </li>
+                                        <li class="side-drop-contacts__item">
+                                            <div class="side-drop-contacts__title">Аddress</div>
+                                            <div class="side-drop-contacts__value">
+                                                16/1 Portovaya street,
+                                                Volzhsky city, Volgograd area,
+                                                Russia, 404130
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Contacts -->
+            </div>
+            <div class="side-line-langs dropdown">
+                <a href="javascript:void(0)" class="side-line-langs__link" data-toggle="dropdown">
+                    <span class="side-line-langs__icon" style="background-image: url(img/template/icons/lang_en.png)"></span>
+                </a>
+                <div class="dropdown-menu side-line-langs__menu">
+                    <a href="?" class="side-line-langs__menu-link">
+                        <span class="side-line-langs__icon side-line-langs__icon_big" style="background-image: url(img/template/icons/lang_fr.png)"></span>
+                    </a>
+                    <a href="?" class="side-line-langs__menu-link">
+                        <span class="side-line-langs__icon side-line-langs__icon_big" style="background-image: url(img/template/icons/lang_sp.png)"></span>
+                    </a>
+                    <a href="?" class="side-line-langs__menu-link">
+                        <span class="side-line-langs__icon side-line-langs__icon_big" style="background-image: url(img/template/icons/lang_ru.png)"></span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="side-line__arrow js-side-line-scroll" id="side_scroll"></a>
+        </div>
+
+        <div class="intro__wrapper" id="intro-wrapper">
+            <div class="intro__move-content" id="intro-move" >
+                <header class="header">
+                    <div class="header__wrapper">
+                        <div class="header-logo">
+                            <a href="?">
+                                <img class="header-logo__img" src="img/template/logo.png" alt="ANT Technologies">
+                            </a>
+                        </div>
+                        <div class="header__center">
+                            <ul class="header-menu">
+                                <li class="header-menu__item">
+                                    <a href="?" class="header-menu__link">Projects</a>
+                                </li>
+                                <li class="header-menu__item">
+                                    <a href="?" class="header-menu__link">ANT Technologies</a>
+                                </li>
+                                <li class="header-menu__item">
+                                    <a href="?" class="header-menu__link">Contacts</a>
+                                </li>
+                                <li class="header-menu__item header-menu__item_drop">
+                                    <div class="dropdown">
+                                        <a href="header-menu__link" data-toggle="dropdown">
+                                            <span class="burger">
+                                                <i class="burger__row"></i>
+                                                <i class="burger__row"></i>
+                                                <i class="burger__row"></i>
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="?" class="dropdown-item">ANT Technologies</a>
+                                            <a href="?" class="dropdown-item">Projects</a>
+                                            <a href="?" class="dropdown-item">Partners</a>
+                                            <a href="?" class="dropdown-item">Videos</a>
+                                            <a href="?" class="dropdown-item d-block d-md-none">Language</a>
+                                            <a href="?" class="dropdown-item d-block d-md-none">Home</a>
+                                            <a href="?" class="dropdown-item d-block d-md-none">Contacts</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__right">
+                            <ul class="header-langs">
+                                <li class="header-langs__item active">
+                                    <a href="?" class="header-langs__link" style="background-image: url(img/template/icons/lang_en.png)"></a>
+                                </li>
+                                <li class="header-langs__item">
+                                    <a href="?" class="header-langs__link" style="background-image: url(img/template/icons/lang_fr.png)"></a>
+                                </li>
+                                <li class="header-langs__item">
+                                    <a href="?" class="header-langs__link" style="background-image: url(img/template/icons/lang_sp.png)"></a>
+                                </li>
+                                <li class="header-langs__item">
+                                    <a href="?" class="header-langs__link" style="background-image: url(img/template/icons/lang_ru.png)"></a>
+                                </li>
+                            </ul>
+                            <div>
+                                <a href="mailto:ant-russia@mail.ru" class="header-contact">
+                                    <span class="text-primary">ant-russia</span>@mail.ru
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="intro js-intro-animate" id="intro">
+                <div class="intro-bg" style="background-image: url('img/template/inner_bg.jpg')"></div>
+                <div class="intro-sections js-intro-sections">
+                    <div class="intro-sections__item intro-sections__item_1"></div>
+                    <div class="intro-sections__item intro-sections__item_2"></div>
+                    <div class="intro-sections__item intro-sections__item_3"></div>
+                    <div class="intro-sections__item intro-sections__item_4"></div>
+                    <div class="intro-sections__item intro-sections__item_5"></div>
+                    <div class="intro-sections__item intro-sections__item_6"></div>
+                </div>
+                <div class="intro-content">
+                    <div id="intro-content-min">
+                        <div class="intro-cards">
+                            <div class="intro-cards__column intro-cards__column_empty">
+                                <div class="intro-card"></div>
+                            </div>
+                            <div class="intro-cards__column">
+                                <div class="intro-card">
+
+                                    <div class="intro-card__content">
+                                        <div class="intro-card__filler"></div>
+                                        <div class="intro-card-mark">
+                                            <div class="intro-card-mark__plus"></div>
+                                            <div class="intro-card-mark__square"></div>
+                                        </div>
+                                        <div class="intro-card__title">
+                                            ANT Soil
+                                            stabilization
+                                        </div>
+                                        <div class="intro-card__text">
+                                            This technology was taken from nature. It is safe, easy to use, has high results and low cost. Roads built with ANT soil stabilization technology are operated from the Karakum Desert to the Arctic Circle.
+                                        </div>
+                                        <div class="intro-card__footer">
+                                            <a href="?" class="btn intro-card__btn">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro-cards__column">
+                                <div class="intro-card">
+                                    <div class="intro-card__filler"></div>
+                                    <div class="intro-card__content">
+                                        <div class="intro-card-mark">
+                                            <div class="intro-card-mark__plus"></div>
+                                            <div class="intro-card-mark__square"></div>
+                                        </div>
+                                        <div class="intro-card__title">
+                                            ANT Hot regeneration
+                                            of asphalt
+                                        </div>
+                                        <div class="intro-card__text">
+                                            Our technology allows you to re-use RAP without adding a new bitumen. The organic regenerator of asphalt "ANT" rejuvenates the old bitumen and gives the asphalt a new life. This technology has no analogues in the world.
+                                        </div>
+                                        <div class="intro-card__footer">
+                                            <a href="?" class="btn intro-card__btn">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro-cards__column">
+                                <div class="intro-card">
+                                    <div class="intro-card__filler"></div>
+                                    <div class="intro-card__content">
+                                        <div class="intro-card-mark">
+                                            <div class="intro-card-mark__plus"></div>
+                                            <div class="intro-card-mark__square"></div>
+                                        </div>
+                                        <div class="intro-card__title">
+                                            ANT Cold
+                                            recycling
+                                        </div>
+                                        <div class="intro-card__text">
+                                            ANT cold regeneration technology allows performing repair works without the use of bitumen emulsion or foamed bitumen. At the same time, the strength of the road increases and the cost of construction decreases.
+                                        </div>
+                                        <div class="intro-card__footer">
+                                            <a href="?" class="btn intro-card__btn">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro-cards__column">
+                                <div class="intro-card">
+                                    <div class="intro-card__filler"></div>
+                                    <div class="intro-card__content">
+                                        <div class="intro-card-mark">
+                                            <div class="intro-card-mark__plus"></div>
+                                            <div class="intro-card-mark__square"></div>
+                                        </div>
+                                        <div class="intro-card__title">
+                                            ANT Soil
+                                            stabilization
+                                        </div>
+                                        <div class="intro-card__text">
+                                            The strength of our roads is checked in Siberia
+                                        </div>
+                                        <div class="intro-card__footer">
+                                            <a href="?" class="btn intro-card__btn">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro-cards__column intro-cards__column_empty">
+                                <div class="intro-card"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="intro-slider__wrapper">
+                        <div class="intro-slider js-intro-slider">
+                            <div class="intro-slider-item">
+                                <a href="?" class="intro-slider-item__title">
+                                    <span class="intro-slider-item__grand">ANT</span> soil stabilization
+                                </a>
+                                <div class="intro-slider-item__text">The strength of our roads is checked in Siberia</div>
+                            </div>
+                            <div class="intro-slider-item">
+                                <a href="?" class="intro-slider-item__title">
+                                    <span class="intro-slider-item__grand">ANT</span> hot regeneration of asphalt
+                                </a>
+                                <div class="intro-slider-item__text">New solution for asphalt regeneration</div>
+                            </div>
+                            <div class="intro-slider-item">
+                                <a href="?" class="intro-slider-item__title">
+                                    <span class="intro-slider-item__grand">ANT</span> cold recycling
+                                </a>
+                                <div class="intro-slider-item__text">Low cost - high quality</div>
+                            </div>
+                            <div class="intro-slider-item">
+                                <a href="?" class="intro-slider-item__title">
+                                    <span class="intro-slider-item__grand">ANT</span> technologies
+                                </a>
+                                <div class="intro-slider-item__text">Innovation technologies for road construction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <main class="main" id="main">
+        <!-- Header partial -->
+
+<div class="content-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="content-page__title">Who we are</div>
+            </div>
+            <div class="col-md-9">
+                <img class="img-fluid content-page__img" src="img/content/who_we_bg_2.jpg" alt="">
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <p>ANT-Engineering brings to your attention own innovative ANT soil stabilization technology. This technology is completely different from other world's technologies of soil stabilization for a number of factors.</p>
+                        <p>The ANT technology was first developed for road works in difficult climatic conditions of Russia such as: a large amount of rain and snow, a large number of cycles of freezing and thawing of the road during the winter period, as well as air temperatures from + 40°C to - 50°C.</p>
+                    </div>
+                    <div class="col-xl-6">
+                        <p>Now more than 300 km of roads of various technical categories have been constructed in Russia and they are operated in all climatic zones from the southern steppes to Eastern Siberia.</p>
+                        <p>Roads constructed using the ANT technology are also found in Belarus and Moldova. The distinctive feature of ANT soil stabilization technology is the high strength of the stabilized soil, the low construction cost, the ease of application of the technology and 100% safety for nature and humans.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 py-md-5">
+                <p>The main element of the technology is the ANT soil stabilizer. It is produced from natural organic raw materials and is completely safe for nature and humans.</p>
+                <p>ANT stabilizer at the molecular level initiates redoxreaction in the soil, resulting in the formation of new crystalline compounds between individual soil particles, that’s why the soil becomes monolithic.</p>
+                <p>This reaction repeats the processes of formation of sedimentary rock materials in nature.</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img class="img-fluid content-page__img" src="img/content/colba.png" alt="">
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-xl-6">
+                        ANT stabilizer is a concentrated liquid and, together with water, is used to stabilize the soil. The required amount of water is calculated, taking into account the achievement of optimum moisture when compaction of this soil and its natural moisture. The rate of consumption of ANT stabilizer is 0.007% of the mass of the soil. The stabilizer is mixes with water and added into the soil. In practice, under different climatic conditions and soil moisture, the solubility of the stabilizer with water is from 1: 250 to 1: 1500 (one liter of ANT stabilizer for the quantity of liters of water.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Footer partial -->
+
+
+
+        <footer class="footer">
+
+            <div class="footer__area" style="background-image: url('img/template/footer_bg.jpg')">
+                <div class="footer__wrapper">
+                    <div class="footer__logo-column">
+                        <div class="footer__logo-place">
+                            <a href="?" class="footer-logo">
+                                <img class="footer-logo__img" src="img/template/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__card-column footer__card-column_1">
+                        <div class="footer-card">
+                            <div class="footer-card__content">
+                                <div class="footer-card-mark">
+                                    <div class="footer-card-mark__plus"></div>
+                                    <div class="footer-card-mark__square"></div>
+                                </div>
+                                <div class="footer-card__title">Solutions</div>
+                                <div class="footer-card-list">
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">ANT Soil stabilization</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">ANT Hot regeneration of asphalt</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">ANT Cold recycling</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">ANT Soil stabilization</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__card-column footer__card-column_2">
+                        <div class="footer-card">
+                            <div class="footer-card__content">
+                                <div class="footer-card-mark">
+                                    <div class="footer-card-mark__plus"></div>
+                                    <div class="footer-card-mark__square"></div>
+                                </div>
+                                <div class="footer-card__title">Menu</div>
+                                <div class="footer-card-list">
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">Home</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">ANT Technologies</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">Projects</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">Partners</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="?" class="footer-card-list__link">Videos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__card-column footer__card-column_3">
+                        <div class="footer-card">
+                            <div class="footer-card__content">
+                                <div class="footer-card-mark">
+                                    <div class="footer-card-mark__plus"></div>
+                                    <div class="footer-card-mark__square"></div>
+                                </div>
+                                <div class="footer-card__title">Contacts</div>
+                                <div class="footer-card-list">
+                                    <div class="footer-card-list__item">
+                                        16/1 Portovaya street,
+                                        Volzhsky city,
+                                        Volgograd area,
+                                        Russia, 404130
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="tel:+79616759281" class="footer-card-list__link">+7 (961) 675-92-81</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="mailto:ant-russia@mail.ru" class="footer-card-list__link">ant-russia@mail.ru</a>
+                                    </div>
+                                    <div class="footer-card-list__item">
+                                        <a href="https://www.facebook.com/antrussia" class="footer-card-list__link footer-card-list__link_underline" target="_blank">https://www.facebook.com/antrussia</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__card-column footer__card-column_4">
+                        <div class="footer-card">
+                            <div class="footer-card__content">
+                                <div class="footer-card-mark">
+                                    <div class="footer-card-mark__plus"></div>
+                                    <div class="footer-card-mark__square"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+
+    <!-- All included libraries -->
+    <script src="js/main.js"></script>
+
+    <!-- Users Scripts -->
+    <script src="js/scripts.js"></script>
+
+
+    </body>
+</html>
