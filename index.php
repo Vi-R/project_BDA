@@ -175,7 +175,38 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 								<img class="contacts-card__img" alt="" src="<?= SITE_TEMPLATE_PATH ?>/img/content/marker_whatsupp_new_1.png">
                             </div>
                         </div>
+<pre>
 
+<?php
+global $USER;
+    if($USER->IsAdmin())
+	{
+$credentials ['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal182863177visits,ym:s:goal185459002visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов, при которых достигнуты цели:
+echo 'Число визитов, в которые достигнуты цели:','<br>';
+echo 'Вызов номера:',' ',$res['totals'][0][0],'<br>';
+}
+
+?>
+</pre>
                     </div>                    
                     <div class="col-md-4 index-contacts__col">
                         <div class="contacts-card contacts-card_facebook">
@@ -220,7 +251,38 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 								</ul>
                             </div>
                         </div>
+<pre>
 
+<?php
+global $USER;
+    if($USER->IsAdmin())
+	{
+$credentials ['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal185459002visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов, при которых достигнуты цели:
+echo 'Число визитов, в которые достигнуты цели:','<br>';
+echo 'Клик по email:',' ', $res['totals'][0][0],'<br>';
+}
+
+?>
+</pre>
                     </div>
                 </div>
             </div>
@@ -233,7 +295,38 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                 <div class="section__title title-webform">
                     Or send message:
                 </div>
-  
+ <pre>
+
+<?php
+global $USER;
+    if($USER->IsAdmin())
+	{
+$token = 'AQAAAAAD01o0AAcZlbkupbPVkEeUlUOgbNE-OHk';
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal181226134visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $token));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов, при заполнении формы	
+echo 'Число визитов, в которые достигнуты цели:','<br>';
+echo 'Взаимодействия с формой:',' ', $res['totals'][0][0],'<br>';
+}
+
+?>
+</pre>  
             </div>
             
             <? if (isset($_REQUEST['formresult']) && $_REQUEST['formresult'] == 'addok'):?>

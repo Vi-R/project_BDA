@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
     <head>
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=77553202&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/77553202/1_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" class="ym-advanced-informer" data-cid="77553202" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(77553202, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+   });
+
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/77553202" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <?
 $APPLICATION->SetTitle("ANT Technologies");
 ?>
@@ -39,7 +61,93 @@ $APPLICATION->SetTitle("ANT Technologies");
             <div class="side-line-menu">
 
 
- 
+ <!-- Adm -->
+  <div class="side-line-menu__item dropdown">
+                    <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Metrica" data-trigger="hover" data-placement="left" data-offset="0, 10" data-toggle="dropdown" id="side_cookies_dropdown_link">
+					<span class="side-line-menu__icon side-line-menu__icon_menu"></span>
+                    </a>
+                    <div class="dropdown-menu side-line-menu__dropdown">
+                        <div class="side-drop">
+                            <div class="side-drop__wrapper">
+                                <div class="side-drop__title">Metrica</div>
+                                	<div class="side-drop__container">
+                                   	 <div class="side-drop__text">
+                                   		 </div>
+                                   			 <div class="side-drop__footer">
+
+<?
+$credentials ['key'];
+
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:pageDepth,ym:s:sumGoalReachesAny,ym:s:mobilePercentage,ym:s:bounceRate,ym:s:avgVisitDurationSeconds,ym:s:newUsers,ym:s:avgDaysBetweenVisits,ym:s:upTo24AgePercentage,ym:s:upTo34AgePercentage,ym:s:upTo44AgePercentage,ym:s:over44AgePercentage,ym:s:manPercentage,ym:s:womanPercentage',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' .$credentials ));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+
+$res = json_decode($res, true);	
+//print_r($res);
+
+// Глубина просмотра	
+echo 'Глубина просмотра:',' ', $res['totals'][0][0], '%','<br>';
+
+//Достижения любой цели
+echo 'Количество всех достигнутых целей,','<br>' ,'которые были поставлены в метрике:', ' ', $res['totals'][0][1],'<br>';
+
+//Мобильность	
+
+echo 'Мобильность:', ' ', $res['totals'][0][2],'%','<br>';
+
+//Отказы	
+
+echo 'Отказы:', ' ', $res['totals'][0][3],'%','<br>';
+
+//Время на сайте		
+
+echo 'Время на сайте:', ' ', $res['totals'][0][4], 'мин','<br>';
+
+
+//Новые пользователи		
+
+echo 'Новые пользователи:', ' ', $res['totals'][0][5],'<br>';
+
+//Среднее колво дней между визитами
+
+echo 'Дни между визитами:', ' ', $res['totals'][0][6],'<br>';
+
+//Возрастные категории пользователей
+
+echo 'Визиты пользователей:','<br>';
+echo '18-24 лет',' ', $res['totals'][0][7],'%','<br>';
+echo '25-34 лет',' ', $res['totals'][0][8],'%','<br>';
+echo '35-45 лет',' ', $res['totals'][0][9],'%','<br>';
+echo '45+',' ', $res['totals'][0][10],'%','<br>';
+
+//Гендер
+echo 'Гендер:','<br>';
+
+echo 'Доля мужчин на сайте:',' ', $res['totals'][0][11],'%','<br>';
+echo 'Доля женщин на сайте:',' ', $res['totals'][0][12],'%','<br>';
+}
+?>
+
+
+                                 		</div>
+									</div> 
+                               
+							</div>
+                        </div>
+                    </div>
+                </div>
+                 <!--/ Adm -->
 
 
                 <!-- Menu -->
@@ -93,6 +201,34 @@ $APPLICATION->SetTitle("ANT Technologies");
                                         <button class="btn btn-block btn-outline-dark side-drop__btn" onclick="$('#side_cookies_dropdown_link').dropdown('toggle')"><?= GetMessage('HEADER_COOKIES_CLOSE')?></button>
                                     </div>
                                 </div>
+<pre>
+
+<?php
+$credentials['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:cookieEnabledPercentage',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// cookies	
+echo 'Доля визитов с вкл. cookies:','<br>', $res['totals'][0][0], '%','<br>';
+}
+
+?>
+</pre>
                             </div>
                         </div>
                     </div>
@@ -137,7 +273,35 @@ $APPLICATION->SetTitle("ANT Technologies");
 									<? endif; ?>
                                 </div>
                 </div>
+<pre>
 
+<?php
+$credentials ['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal181227619visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов при переходе на обратную связь	
+echo 'Число визитов, в которые достигнуты цели:','<br>';
+echo 'Переход на обратную связь:',' ', $res['totals'][0][0],'<br>';
+
+}
+?>
+</pre>
                             </div>
                         </div>
                     </div>
@@ -170,7 +334,36 @@ $APPLICATION->SetTitle("ANT Technologies");
 													)
 												);?>
 
+<pre>
 
+<?php
+$credentials ['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal182863177visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов, при которых достигнуты цели:
+echo 'Число визитов, в которые достигнуты цели:','<br>';
+echo 'Вызов номера:',' ', $res['totals'][0][0],'<br>';
+
+	}
+
+?>
+</pre>
                                             </div>
                                         </li>
                                         <li class="side-drop-contacts__item">
@@ -186,7 +379,35 @@ $APPLICATION->SetTitle("ANT Technologies");
 														"PATH" => "/include/mail.php"
 													)
 												);?>
+<pre>
 
+<?php
+$credentials ['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal185459002visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов, при которых достигнуты цели:
+echo 'Число визитов, в которые достигнуты цели:','<br>';
+echo 'Клик по email:',' ', $res['totals'][0][0],'<br>';
+	}
+
+?>
+</pre>
                                             </div>
                                         </li>
                                         <li class="side-drop-contacts__item">
@@ -234,6 +455,38 @@ $APPLICATION->SetTitle("ANT Technologies");
                                     </ul>
                                 </div>
                             </div>
+<pre>
+
+<?php
+global $USER;
+    if($USER->IsAdmin())
+	{
+
+$credentials ['key'];
+ 
+$params = array(
+	'ids'     => '77553202', 
+	'metrics' => 'ym:s:goal181226827visits',
+	'date1'   => '6daysAgo', // 7daysAgo - неделя, 30daysAgo - месяц, 365daysAgo - год
+	'date2'   => 'today',
+);
+
+$ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$res = curl_exec($ch);
+curl_close($ch);
+ 
+$res = json_decode($res, true);	
+//print_r($res);
+// Число визитов, при переходе на Контакты	
+echo 'Число визитов, при переходе на данную вкладку:','<br>', $res['totals'][0][0],'<br>';
+
+}
+?>
+</pre>
                         </div>
                     </div>
                 </div>
