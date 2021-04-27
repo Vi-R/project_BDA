@@ -73,6 +73,26 @@ $APPLICATION->SetTitle("ANT Technologies");
         <div class="side-line">
             <div class="side-line-menu">
 
+ <!-- Script -->
+  <div class="side-line-menu__item dropdown">
+<? $USER; # ID группы
+if ($USER->IsAdmin()){
+?>
+                    <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Script" data-trigger="hover" data-placement="left" data-offset="0, 10" data-toggle="dropdown" id="side_cookies_dropdown_link">
+					<span class="side-line-menu__icon side-line-menu__icon_menu"></span>
+<?}
+?>
+                    </a>
+                    <div class="dropdown-menu side-line-menu__dropdown">
+                        <div class="side-drop">
+                            <div class="side-drop__wrapper">
+                                <div class="side-drop__title">Сценарии</div>
+                                	<div class="side-drop__container">
+                                   	 <div class="side-drop__text">
+										 <ul>1. Пользователь хочет использовать другой язык ресурса</ul>
+											<ul>1.1. Веб ресурс мультиязычен, пользователь может выбрать любой из предложенных языков(русский, английский)</ul>
+											<ul>1.2. Пользователь выбирает требуемый язык</ul>
+											<ul>1.3. Пользователь пользуется ресурсом на выбранном языке</ul>
 
  <!-- Adm -->
   <div class="side-line-menu__item dropdown">
