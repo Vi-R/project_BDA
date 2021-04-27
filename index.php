@@ -178,11 +178,11 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 <pre>
 
 <?php
+
+$credentials ['key'];
 global $USER;
     if($USER->IsAdmin())
 	{
-$credentials ['key'];
- 
 $params = array(
 	'ids'     => '77553202', 
 	'metrics' => 'ym:s:goal182863177visits,ym:s:goal185459002visits',
@@ -301,8 +301,7 @@ echo 'Клик по email:',' ', $res['totals'][0][0],'<br>';
 global $USER;
     if($USER->IsAdmin())
 	{
-$token = 'AQAAAAAD01o0AAcZlbkupbPVkEeUlUOgbNE-OHk';
- 
+$credentials ['key'];
 $params = array(
 	'ids'     => '77553202', 
 	'metrics' => 'ym:s:goal181226134visits',
@@ -311,7 +310,7 @@ $params = array(
 );
 
 $ch = curl_init('https://api-metrika.yandex.net/stat/v1/data/bytime?'. urldecode(http_build_query($params)));
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $token));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $credentials));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_HEADER, false);

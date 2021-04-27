@@ -24,6 +24,19 @@ style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" tit
 <noscript><div><img src="https://mc.yandex.ru/watch/77553202" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <?
+$credentials = include($_SERVER['DOCUMENT_ROOT']."/metrica.php");
+global $USER;
+if ($USER->IsAdmin()) 
+{
+echo "Вы администратор!";
+
+}
+else
+{
+echo '<a href=http://xn--80aegqc0cdgck7j.xn--p1ai/bitrix/admin/#authorize>Авторизироваться</a>';
+}
+?>
+<?
 $APPLICATION->SetTitle("ANT Technologies");
 ?>
 
@@ -63,9 +76,14 @@ $APPLICATION->SetTitle("ANT Technologies");
 
  <!-- Adm -->
   <div class="side-line-menu__item dropdown">
+<? $USER; # ID группы
+if ($USER->IsAdmin()){
+?>
                     <a href="javascript:void(0)" class="side-line-menu__link" data-tooltip title="Metrica" data-trigger="hover" data-placement="left" data-offset="0, 10" data-toggle="dropdown" id="side_cookies_dropdown_link">
 					<span class="side-line-menu__icon side-line-menu__icon_menu"></span>
-                    </a>
+<?}
+?> 
+                   </a>
                     <div class="dropdown-menu side-line-menu__dropdown">
                         <div class="side-drop">
                             <div class="side-drop__wrapper">
@@ -76,6 +94,7 @@ $APPLICATION->SetTitle("ANT Technologies");
                                    			 <div class="side-drop__footer">
 
 <?
+{
 $credentials ['key'];
 
 $params = array(
@@ -276,6 +295,9 @@ echo 'Доля визитов с вкл. cookies:','<br>', $res['totals'][0][0],
 <pre>
 
 <?php
+global $USER;
+    if($USER->IsAdmin())
+	{
 $credentials ['key'];
  
 $params = array(
@@ -337,6 +359,9 @@ echo 'Переход на обратную связь:',' ', $res['totals'][0][0
 <pre>
 
 <?php
+global $USER;
+    if($USER->IsAdmin())
+	{
 $credentials ['key'];
  
 $params = array(
@@ -382,6 +407,9 @@ echo 'Вызов номера:',' ', $res['totals'][0][0],'<br>';
 <pre>
 
 <?php
+global $USER;
+    if($USER->IsAdmin())
+	{
 $credentials ['key'];
  
 $params = array(
